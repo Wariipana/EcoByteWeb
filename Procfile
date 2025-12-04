@@ -1,1 +1,1 @@
-web: npm install && npx serve -l $PORT -s .
+web: npm install && npx serve -l $PORT .
