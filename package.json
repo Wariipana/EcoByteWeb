@@ -1,0 +1,7 @@
+{
+  "name": "nombre-de-tu-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx serve -l $PORT -s ."
+  }
+}
