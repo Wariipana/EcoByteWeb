@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoByte - Acceso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/usuarios.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+
+<!-- NAVEGACIÓN -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="img/LOGO.png" alt="">
+            EcoByte
+        </a>
+        <div class="spacer"></div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="highlight">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="PreguntasFrecuentes.html">FAQ</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="InformaciónEducativa.html">Info. Educativa</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="Usuario.html" class="btn">Inicia Sesión</a>
+                <a href="cart.html" style="font-size: 1.2rem;"><i class="fa-solid fa-basket-shopping"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
+
+    <div class="main-container">
+
+        <div class="auth-card" id="card-register">
+            <h1 class="card-title">Registrar Usuario</h1>
+
+            <button class="btn-google-outline">
+                 Registro con Google
+            </button>
+
+            <div class="divider">
+                <span>O</span>
+            </div>
+
+            <form id="formRegister">
+                <div class="input-group">
+                    <label>Email</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="reg-email" placeholder="email@address.com" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Contraseña</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="reg-pass" placeholder="••••••••••" required>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="news">
+                    <label for="news">Reciba noticias, actualizaciones y ofertas</label>
+                </div>
+
+                <button type="submit" class="btn-primary">Registrarse</button>
+
+                <p class="terms-text">
+                    Al crear una cuenta, usted acepta los Términos de servicio y la Política de privacidad.
+                </p>
+
+                <div class="footer-link">
+                    ¿Ya tienes una cuenta? <a href="#" onclick="showLogin()">Inicia sesión aquí</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="auth-card hidden" id="card-login">
+            <h1 class="card-title">Iniciar sesión</h1>
+            <p class="card-subtitle">Inicie sesión ingresando su dirección de correo electrónico y contraseña.</p>
+
+            <form id="formLogin">
+                <div class="input-group">
+                    <label>Email</label>
+                    <div class="input-wrapper">
+                        <i class="far fa-envelope input-icon"></i>
+                        <input type="email" id="login-email" placeholder="email" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Contraseña</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" id="login-pass" placeholder="Contraseña" required>
+                        <i class="far fa-eye show-pass" onclick="togglePass('login-pass')"></i>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Ingresar</button>
+
+                <div class="toggle-group">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="toggle-label">Recuérdame</span>
+                </div>
+
+                <div class="divider">
+                    <span>O</span>
+                </div>
+
+                <button type="button" class="btn-google-solid">
+                    <i class="fab fa-google"></i> Iniciar sesión con Google
+                </button>
+
+                <div class="footer-link">
+                    ¿No tienes una cuenta? <a href="#" onclick="showRegister()">Regístrate aquí</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-logo">
+                    <img src="img/LOGO.png" alt="">
+                    EcoByte</div>
+                <p><em>Promovemos la sostenibilidad tecnológica y la economía circular.</em></p>
+                <p><b>Web por:</b></p>
+                <p>Grupo 05</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces útiles</h3>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="Contactanos.html">Contáctanos</a>
+                <a href="InformaciónEducativa.html">Recursos Educativos</a>
+                <a href="Nosotros.html">Sobre Nosotros</a>
+                <a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                <a href="cart.html">Carrito de Compras</a>
+                <a href="Usuario.html">Inicio de Sesión</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fa-regular fa-envelope"></i> info@ecobyte.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Chiclayo - Perú</p>
+                <p><i class="fa-solid fa-globe"></i> www.ecobyte.com</p>
+                <p><i class="fa-solid fa-phone"></i> +51 938 368 675</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 EcoByte — Tecnología con conciencia ecológica - Made with ❤ by Grupo 05</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/usuario.js"></script>
+</body>
+
+</html>

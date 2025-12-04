@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoByte - Sobre Nosotros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/nosotros.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="img/LOGO.png" alt="">
+            EcoByte
+        </a>
+        <div class="spacer"></div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="highlight">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="PreguntasFrecuentes.html">FAQ</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="InformaciónEducativa.html">Info. Educativa</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="Usuario.html" class="btn">Inicia Sesión</a>
+                <a href="cart.html" style="font-size: 1.2rem;"><i class="fa-solid fa-basket-shopping"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
+
+    <header id="hero">
+        <h1>"Sobre nosotros"</h1>
+    </header>
+
+    <section id="que-somos" class="container mt-5">
+        <h2>¿QUÉ SOMOS?</h2>
+        <p>EcoByte es una organización dedicada a la sostenibilidad tecnológica. Nuestro propósito es reducir el
+            impacto ambiental generado por los residuos electrónicos, a través de la recuperación, reacondicionamiento y
+            comercialización responsable de componentes tecnológicos reciclados.</p>
+    </section>
+
+    <section id="principios" class="container mt-5">
+        <h2>PRINCIPIOS SOSTENIBLES</h2>
+        <div class="principles-grid">
+            <div class="principle-item">
+                <div class="icon-box"><i class="fas fa-download"></i></div>
+                <h3>REDUCIR</h3>
+                <p>Disminuimos la cantidad de desechos electrónicos mediante la prolongación del ciclo de vida de los
+                    dispositivos.</p>
+            </div>
+            <div class="principle-item">
+                <div class="icon-box"><i class="fas fa-sync-alt"></i></div>
+                <h3>REUTILIZAR</h3>
+                <p>Damos una segunda oportunidad a componentes tecnológicos que aún pueden funcionar correctamente.</p>
+            </div>
+            <div class="principle-item">
+                <div class="icon-box"><i class="fas fa-check"></i></div>
+                <h3>RECICLAR</h3>
+                <p>Aprovechamos los materiales recuperables para transformarlos en nuevos productos sostenibles.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container split-section mt-5">
+        <div class="split-content">
+            <h2>Misión</h2>
+            <p>Fomentar el <strong>uso responsable de la tecnología</strong>, ofreciendo productos electrónicos
+                reacondicionados de calidad que contribuyan a la reducción de residuos y al cuidado del medio ambiente,
+                promoviendo al mismo tiempo una conciencia ecológica en la comunidad.</p>
+        </div>
+        <div class="split-image">
+            <img src="img/misión.png" alt="Misión" class="img-fluid">
+        </div>
+    </section>
+
+    <section class="container split-section reverse-layout mt-5">
+        <div class="split-content">
+            <h2>Visión</h2>
+            <p>Ser una <strong>empresa líder en sostenibilidad tecnológica</strong> a nivel nacional, reconocida por
+                su compromiso con la innovación verde, la reutilización de materiales electrónicos y la generación de un
+                impacto ambiental positivo en la sociedad.</p>
+        </div>
+        <div class="split-image">
+            <img src="img/visión.png" alt="Visión" class="img-fluid">
+        </div>
+    </section>
+
+    <section id="areas" class="container mt-5 mb-5">
+        <h2 class="text-center mb-5">Nuestras Áreas</h2>
+
+        <div id="carouselAreasEcoByte" class="carousel slide carousel-dark" data-bs-ride="carousel">
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselAreasEcoByte" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselAreasEcoByte" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselAreasEcoByte" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner pb-5"> <div class="carousel-item active" data-bs-interval="5000">
+                    <div class="carousel-area-card">
+                        <div class="icon-circle bg-ventas">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="area-title">Ventas</h3>
+                        <p class="area-desc">
+                            Cumplimos un rol esencial en la construcción de una economía responsable. 
+                            Cada producto entregado es un paso hacia un mundo más sostenible.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-area-card">
+                        <div class="icon-circle bg-produccion">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="area-title">Producción</h3>
+                        <p class="area-desc">
+                            Nos encargamos del reacondicionamiento meticuloso de cada componente, 
+                            asegurando calidad y funcionalidad para darles una segunda vida útil.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-area-card">
+                        <div class="icon-circle bg-logistica">
+                            <i class="fas fa-truck-loading"></i>
+                        </div>
+                        <h3 class="area-title">Logística</h3>
+                        <p class="area-desc">
+                            Aseguramos una recolección y entrega eficiente, optimizando rutas 
+                            para reducir la huella de carbono al mínimo posible.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAreasEcoByte" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselAreasEcoByte" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="trayectoria" class="container mt-5">
+        <h2>Trayectoria Empresarial</h2>
+
+        <div class="timeline-display">
+            <div class="timeline-icon-placeholder">
+                <i class="fas fa-history"></i>
+            </div>
+            <div class="timeline-text-content">
+                <h3 id="tl-date">Jun 2016</h3>
+                <p id="tl-desc">Alcanzamos los 50,000 usuarios registrados y ese mismo año alcanzamos por primera vez
+                    nuestra máxima cantidad de ventas.</p>
+            </div>
+        </div>
+
+        <div class="timeline-nav">
+            <div class="timeline-line-bg"></div>
+            <div class="timeline-line-progress" id="tl-progress"></div>
+
+            <div class="timeline-points">
+                <div class="tl-point" onclick="setTimeline(0)">
+                    <div class="tl-dot"></div>
+                    <div class="tl-date-label">Sep 2014</div>
+                </div>
+                <div class="tl-point" onclick="setTimeline(1)">
+                    <div class="tl-dot"></div>
+                    <div class="tl-date-label">Sep 2016</div>
+                </div>
+                <div class="tl-point active" onclick="setTimeline(2)">
+                    <div class="tl-dot"></div>
+                    <div class="tl-date-label">Jun 2016</div>
+                </div>
+                <div class="tl-point" onclick="setTimeline(3)">
+                    <div class="tl-dot"></div>
+                    <div class="tl-date-label">Ago 2018</div>
+                </div>
+                <div class="tl-point" onclick="setTimeline(4)">
+                    <div class="tl-dot"></div>
+                    <div class="tl-date-label">Abr 2020</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipo" class="container mt-5 mb-5">
+        <h2>Nuestro Equipo</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="img/Willy.png" alt="Member">
+                <h4>Ing. Rios Ipanaqué, Willy Arturo</h4>
+                <div class="role-badge">Gerente del área de Ventas</div>
+            </div>
+            <div class="team-member">
+                <img src="img/Piero (2).png" alt="Member">
+                <h4>Ing. Paredes Campos, Matias</h4>
+                <div class="role-badge">Gerente del área en Redes</div>
+            </div>
+            <div class="team-member">
+                <img src="img/Gabriela.png" alt="Member">
+                <h4>Ing. Serquén Chávarri, Gabriela</h4>
+                <div class="role-badge">Gerente del área de Contactos</div>
+            </div>
+            <div class="team-member">
+                <img src="img/Piero.png" alt="Member">
+                <h4>Ing. Santisteban Hernandez, Piero</h4>
+                <div class="role-badge">Gerente del área de Compra</div>
+            </div>
+        </div>
+    </section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-logo">
+                    <img src="img/LOGO.png" alt="">
+                    EcoByte</div>
+                <p><em>Promovemos la sostenibilidad tecnológica y la economía circular.</em></p>
+                <p><b>Web por:</b></p>
+                <p>Grupo 05</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces útiles</h3>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="Contactanos.html">Contáctanos</a>
+                <a href="InformaciónEducativa.html">Recursos Educativos</a>
+                <a href="Nosotros.html" class="highlight">Sobre Nosotros</a>
+                <a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                <a href="cart.html">Carrito de Compras</a>
+                <a href="Usuario.html">Inicio de Sesión</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fa-regular fa-envelope"></i> info@ecobyte.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Chiclayo - Perú</p>
+                <p><i class="fa-solid fa-globe"></i> www.ecobyte.com</p>
+                <p><i class="fa-solid fa-phone"></i> +51 938 368 675</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 EcoByte — Tecnología con conciencia ecológica - Made with ❤ by Grupo 05</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="js/nosotros.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

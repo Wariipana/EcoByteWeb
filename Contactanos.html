@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoByte_Contáctanos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/contactanos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="img/LOGO.png" alt="">
+            EcoByte
+        </a>
+        <div class="spacer"></div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="highlight">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="PreguntasFrecuentes.html">FAQ</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="InformaciónEducativa.html">Info. Educativa</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="Usuario.html" class="btn">Inicia Sesión</a>
+                <a href="cart.html" style="font-size: 1.2rem;"><i class="fa-solid fa-basket-shopping"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
+
+    <div class="main-container">
+        
+        <div class="info-column">
+            <h2 class="section-title">CONTÁCTANOS</h2>
+            <h3 class="section-subtitle">Resolver tus dudas y solicitudes</h3>
+            
+            <p class="info-text">
+                Escríbenos y con gusto te ayudaremos.<br>
+                Tu opinión es muy importante para nosotros, así que no dudes en ponerte en contacto. 
+                ¡Estamos aquí para escucharte!
+            </p>
+
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="icon-wrapper">
+                        <img src="img/sobre (2).png" alt="">
+                    </div>
+                    <div class="card-details">
+                        <span class="card-label">Email:</span>
+                        <span class="card-value">contact@ecobyte.com</span>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="icon-wrapper">
+                        <img src="img/llamada-telefonica (1).png" alt="">
+                    </div>
+                    <div class="card-details">
+                        <span class="card-label">Teléfono</span>
+                        <span class="card-value">(+51) 945 687 021</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-media">
+                <span class="social-label">Redes sociales</span>
+                <div class="social-icons">
+                    <img src="img/facebook (1).png" alt="">
+                    <img src="img/instagram (1).png" alt="">
+                    <img src="img/twitter-alt (1).png" alt="">
+                    <img src="img/linkedin.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-column">
+            
+            <div class="form-wrapper" id="contactFormWrapper">
+                <form id="contactForm">
+                    <div class="input-group">
+                        <label for="nombre">Tú nombre</label>
+                        <input type="text" id="nombre" placeholder="Por favor ingresa tu apellido y nombre" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Tu email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="telefono">Teléfono</label>
+                        <div class="phone-input-container">
+                            <select class="phone-prefix">
+                                <option value="+51">+51</option>
+                                <option value="+1">+1</option>
+                                <option value="+34">+34</option>
+                            </select>
+                            <input type="tel" id="telefono" placeholder="Teléfono" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="mensaje">Escríbenos tu mensaje :</label>
+                        <textarea id="mensaje" placeholder="Escríbenos tu duda" rows="4" required></textarea>
+                    </div>
+
+                    <div class="recaptcha-mock">
+                        <div class="recaptcha-box">
+                            <input type="checkbox" id="robot-check">
+                            <label for="robot-check">No soy un robot</label>
+                        </div>
+                        <div class="recaptcha-logo">
+                            <img src="img/logo_48.png" alt="reCAPTCHA">
+                            <span>reCAPTCHA</span>
+                            <small>Privacy - Terms</small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Enviar</button>
+                </form>
+            </div>
+
+            <div class="success-wrapper hidden" id="successMessage">
+                <div class="success-icon-container">
+                    <div class="check-circle">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+                <h2>Gracias</h2>
+                <p>Tu mensaje ha sido enviado. Nuestro equipo de soporte te responderá en un plazo de 24 horas.</p>
+            </div>
+
+        </div>
+    </div>
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-logo">
+                    <img src="img/LOGO.png" alt="">
+                    EcoByte</div>
+                <p><em>Promovemos la sostenibilidad tecnológica y la economía circular.</em></p>
+                <p><b>Web por:</b></p>
+                <p>Grupo 05</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces útiles</h3>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="Contactanos.html" class="highlight">Contáctanos</a>
+                <a href="InformaciónEducativa.html">Recursos Educativos</a>
+                <a href="Nosotros.html">Sobre Nosotros</a>
+                <a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                <a href="cart.html">Carrito de Compras</a>
+                <a href="Usuario.html">Inicio de Sesión</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fa-regular fa-envelope"></i> info@ecobyte.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Chiclayo - Perú</p>
+                <p><i class="fa-solid fa-globe"></i> www.ecobyte.com</p>
+                <p><i class="fa-solid fa-phone"></i> +51 938 368 675</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 EcoByte — Tecnología con conciencia ecológica - Made with ❤ by Grupo 05</p>
+        </div>
+    </div>
+</footer>
+    <script src="js/contactanos.js"></script>
+</body>
+</html>

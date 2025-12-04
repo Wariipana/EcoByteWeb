@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basura Electrónica (E-waste)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/e-waste.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="img/LOGO.png" alt="">
+            EcoByte
+        </a>
+        <div class="spacer"></div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="highlight">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="PreguntasFrecuentes.html">FAQ</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="InformaciónEducativa.html">Info. Educativa</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="Usuario.html" class="btn">Inicia Sesión</a>
+                <a href="cart.html" style="font-size: 1.2rem;"><i class="fa-solid fa-basket-shopping"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
+
+    <main>
+        <div class="container container-custom">
+            <div class="section-custom">
+
+                <p class="section-title">Basura Electrónica (E-waste)</p>
+                <div class="row g-4">
+                    
+                    <div class="col-lg-8 col-md-12">
+                        <div class="main-content-custom">
+                            
+                            <div id="seccion-que-es">
+                                <p class="question-title">¿Qué es Exactamente el E-waste o RAEE?</p>
+                                <div class="content-with-image">
+                                    <div class="image-float-right d-none d-md-block">
+                                        <img src="img/e-waste4.jpg" alt="E-waste" class="img-standard">
+                                    </div>
+                                    
+                                    <p class="text-content">En términos simples, los RAEE son todos los dispositivos eléctricos o electrónicos que han llegado al final de su vida útil. Esto incluye desde un cepillo de dientes eléctrico hasta un servidor de datos.</p>
+                                    <p class="text-content">La característica principal es que funcionaban con un enchufe, un cable o una batería. Se diferencian de la basura convencional porque su composición es mucho más compleja y peligrosa si no se trata adecuadamente.</p>
+                                </div>
+                            </div>
+
+                            <div class="linea-azul-separadora"></div>
+
+                            <div id="seccion-tipos" class="bloque-tipos">
+                                <div class="row g-3">
+                                    <div class="col-md-5">
+                                        <div class="image-left">
+                                            <img src="img/e-waste1.jpeg" alt="Montaña de basura" class="img-fija-raee">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p class="subsection-title-red">Tipos y Composición: Tesoros y Toxinas</p>
+                                        <p class="text-content fw-bold mb-2">Tipos Comunes de RAEE</p>
+                                        <p class="text-content">Generalmente, los RAEE se clasifican en categorías para facilitar su gestión:</p>
+                                        <ul class="list-content">
+                                            <li><strong>Grandes electrodomésticos:</strong> Refrigeradores, lavadoras, aires acondicionados.</li>
+                                            <li><strong>Equipos de TI:</strong> Laptops, computadoras, móviles, impresoras.</li>
+                                            <li><strong>Aparatos de Consumo:</strong> Televisores, cámaras, equipos de música.</li>
+                                            <li><strong>Pequeños aparatos:</strong> Tostadoras, herramientas, juguetes.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="linea-azul-separadora"></div>
+
+                            <div class="mt-4">
+                                <p class="text-content fw-bold mt-3">Una Mezcla de Tesoros y Toxinas</p>
+                                <p class="text-content">Dentro de un solo dispositivo puedes encontrar:</p>
+
+                                <div class="content-with-image-right">
+                                    <div class="image-float-right-small d-none d-md-block">
+                                        <img src="img/e-waste2.jpg" alt="Reciclaje" class="img-standard">
+                                    </div>
+                                    
+                                    <ul class="list-content">
+                                        <li><strong>Materiales Valiosos:</strong> Oro, plata, cobre, paladio y aluminio.</li>
+                                        <li><strong>Sustancias Peligrosas:</strong>
+                                            <ul class="sub-list">
+                                                <li>Mercurio: En pantallas y baterías.</li>
+                                                <li>Plomo: En soldaduras y tubos antiguos.</li>
+                                                <li>Cadmio: En baterías recargables.</li>
+                                                <li>Retardantes (BFR): En carcasas plásticas.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="separator"></div>
+
+                            <div id="seccion-problema">
+                                <p class="question-title">¿Por Qué es un Problema Tan Grande? La Magnitud del E-waste</p>
+                                <div class="content-with-image">
+                                    <div class="image-float-right d-none d-md-block">
+                                        <img src="img/e-waste3.jpg" alt="Problema global" class="img-standard">
+                                    </div>
+                                    <p class="text-content">El E-waste es el flujo de residuos que más rápido crece en el mundo. La razón no es solo que somos más personas, sino nuestros patrones de consumo.</p>
+                                    <p class="text-content fw-bold mt-3">¿Cuáles son las causas?</p>
+                                    <ol class="list-content numbered-list">
+                                        <li><strong>Obsolescencia Programada:</strong> Productos diseñados para durar poco.</li>
+                                        <li><strong>Rápida Innovación:</strong> Nuevos modelos constantes.</li>
+                                        <li><strong>Bajas Tasas de Reciclaje:</strong> Falta de infraestructura y conciencia.</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="separator"></div>
+
+                            <div id="seccion-peligros">
+                                <p class="subsection-title-red">Los Peligros Ocultos: Impactos de la Gestión Inadecuada</p>
+                                
+                                <p class="text-content fw-bold">Contaminación de Suelo y Agua:</p>
+                                <p class="text-content">Cuando se acumulan en vertederos, la lluvia disuelve metales pesados creando "lixiviados" que contaminan aguas subterráneas.</p>
+
+                                <p class="text-content fw-bold mt-3">Contaminación del Aire:</p>
+                                <p class="text-content">La quema informal de cables libera dioxinas y furanos, altamente cancerígenos.</p>
+
+                                <p class="text-content fw-bold mt-3">El Problema del Tráfico Ilegal</p>
+                                <p class="text-content">Se exporta basura ilegalmente a países en desarrollo disfrazada de "artículos de segunda mano".</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-12">
+                        <div class="sidebar-custom">
+                            <div class="sidebar-header">Índice</div>
+                            <div class="sidebar-content">
+                                <a href="#seccion-que-es" class="sidebar-link">¿Qué es Exactamente el E-waste?</a>
+                                <a href="#seccion-tipos" class="sidebar-link">Tipos y Composición: Tesoros y Toxinas</a>
+                                <a href="#seccion-problema" class="sidebar-link">¿Por Qué es un Problema Tan Grande?</a>
+                                <a href="#seccion-peligros" class="sidebar-link">Los Peligros Ocultos</a>
+                            </div>
+                            
+                            <div class="sidebar-header">Temas Relacionados</div>
+                            <div class="sidebar-buttons">
+                                <a href="e-waste.html" class="sidebar-button d-block text-decoration-none text-dark">Proceso de Reciclamiento</a>
+                                <a href="e-waste.html" class="sidebar-button d-block text-decoration-none text-dark">Guía de Componentes</a>
+                                <a href="e-waste.html" class="sidebar-button d-block text-decoration-none text-dark">Sostenibilidad Digital</a>
+                                <a href="e-waste.html" class="sidebar-button d-block text-decoration-none text-dark">Economía Circular</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-logo">
+                    <img src="img/LOGO.png" alt="">
+                    EcoByte</div>
+                <p><em>Promovemos la sostenibilidad tecnológica y la economía circular.</em></p>
+                <p><b>Web por:</b></p>
+                <p>Grupo 05</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces útiles</h3>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="Contactanos.html">Contáctanos</a>
+                <a href="InformaciónEducativa.html" class="highlight">Recursos Educativos</a>
+                <a href="Nosotros.html">Sobre Nosotros</a>
+                <a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                <a href="cart.html">Carrito de Compras</a>
+                <a href="Usuario.html">Inicio de Sesión</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fa-regular fa-envelope"></i> info@ecobyte.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Chiclayo - Perú</p>
+                <p><i class="fa-solid fa-globe"></i> www.ecobyte.com</p>
+                <p><i class="fa-solid fa-phone"></i> +51 938 368 675</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 EcoByte — Tecnología con conciencia ecológica - Made with ❤ by Grupo 05</p>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

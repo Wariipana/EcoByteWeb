@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Educativa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/InformaciónEducativa.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+
+<!-- NAVEGACIÓN -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="img/LOGO.png" alt="">
+            EcoByte
+        </a>
+        <div class="spacer"></div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="highlight">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="PreguntasFrecuentes.html">FAQ</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="InformaciónEducativa.html">Info. Educativa</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="Usuario.html" class="btn">Inicia Sesión</a>
+                <a href="cart.html" style="font-size: 1.2rem;"><i class="fa-solid fa-basket-shopping"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
+
+
+
+    <main>
+        <div class="container">
+            <div class="section-custom">
+                <p class="section-title">Información Educativa</p>
+                <p class="section-subtitle">Guías de Sostenibilidad y Tecnología</p>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a href="e-waste.html" class="card-link">
+                            <div class="card-custom">
+                                <div class="card-image">
+                                    <img src="img/e-waste.jpg" alt="Basura Electrónica">
+                                </div>
+                                <div class="card-footer-custom">
+                                    Basura Electrónica (E-waste)
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a href="e-waste.html" class="card-link">
+                            <div class="card-custom">
+                                <div class="card-image">
+                                    <img src="img/recondicionamiento.jpg" alt="Proceso de Reacondicionamiento">
+                                </div>
+                                <div class="card-footer-custom">
+                                    Proceso de Reacondicionamiento
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a href="e-waste.html" class="card-link">
+                            <div class="card-custom">
+                                <div class="card-image">
+                                    <img src="img/componentes.jpg" alt="Guía de Componentes">
+                                </div>
+                                <div class="card-footer-custom">
+                                    Guía de Componentes
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a href="e-waste.html" class="card-link">
+                            <div class="card-custom">
+                                <div class="card-image">
+                                    <img src="img/digital.jpeg" alt="Sostenibilidad Digital">
+                                </div>
+                                <div class="card-footer-custom">
+                                    Sostenibilidad Digital
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a href="e-waste.html" class="card-link">
+                            <div class="card-custom">
+                                <div class="card-image">
+                                    <img src="img/circular.jpg" alt="Economía Circular en la Informática">
+                                </div>
+                                <div class="card-footer-custom">
+                                    Economía Circular en la Informática
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="separator-line"></div>
+
+                <p class="section-subtitle">Comunidad y Recursos Adicionales</p>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-3 col-md-4 col-12">
+                        <a href="e-waste.html" class="card-link">
+                            <div class="card-custom">
+                                <div class="card-image larger">
+                                    <img src="img/glosario.jpg" alt="Glosario de Tecnología Verde">
+                                </div>
+                                <div class="card-footer-custom">
+                                    Glosario de Tecnología Verde
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-12">
+                        <a href="e-waste.html" class="card-link">
+                            <div class="card-custom">
+                                <div class="card-image larger">
+                                    <img src="img/casos de exito.jpg" alt="Casos de Éxito: Proyectos Estudiantiles">
+                                </div>
+                                <div class="card-footer-custom">
+                                    Casos de Éxito: Proyectos Estudiantiles
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-4 col-12">
+                        <a href="e-waste.html" class="card-link">
+                            <div class="card-custom">
+                                <div class="card-image larger">
+                                    <img src="img/universidades.jpg" alt="Alianzas con Instituciones Educativas">
+                                </div>
+                                <div class="card-footer-custom">
+                                    Alianzas con Instituciones Educativas
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-logo">
+                    <img src="img/LOGO.png" alt="">
+                    EcoByte</div>
+                <p><em>Promovemos la sostenibilidad tecnológica y la economía circular.</em></p>
+                <p><b>Web por:</b></p>
+                <p>Grupo 05</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces útiles</h3>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="Contactanos.html">Contáctanos</a>
+                <a href="InformaciónEducativa.html" class="highlight">Recursos Educativos</a>
+                <a href="Nosotros.html">Sobre Nosotros</a>
+                <a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                <a href="cart.html">Carrito de Compras</a>
+                <a href="Usuario.html">Inicio de Sesión</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fa-regular fa-envelope"></i> info@ecobyte.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Chiclayo - Perú</p>
+                <p><i class="fa-solid fa-globe"></i> www.ecobyte.com</p>
+                <p><i class="fa-solid fa-phone"></i> +51 938 368 675</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 EcoByte — Tecnología con conciencia ecológica - Made with ❤ by Grupo 05</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

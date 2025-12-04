@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/PreguntasFrecuentes.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="img/LOGO.png" alt="">
+            EcoByte
+        </a>
+        <div class="spacer"></div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="highlight">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="PreguntasFrecuentes.html" class="highlight">FAQ</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="InformaciónEducativa.html">Info. Educativa</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="Usuario.html" class="btn">Inicia Sesión</a>
+                <a href="cart.html" style="font-size: 1.2rem;"><i class="fa-solid fa-basket-shopping"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
+ 
+    <header id="header-section">
+       
+    </header>
+
+
+    <main>
+        <div class="container">
+            <div class="section-custom">
+                <p class="section-title">Preguntas Frecuentes</p>
+                <p class="section-subtitle">Sobre Nuestros Productos y Proceso</p>
+                
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="accordion-item-custom">
+                            <div class="accordion-header-custom collapsed" data-bs-toggle="collapse" data-bs-target="#pregunta1">
+                                ¿Qué significa que un componente es "reacondicionado"?
+                            </div>
+                            <div class="collapse accordion-content-custom" id="pregunta1">
+                                <div class="accordion-body-custom">
+                                    Un componente reacondicionado es un producto que ha sido devuelto, revisado, reparado si es necesario, y restaurado a condiciones óptimas de funcionamiento. Todos nuestros productos reacondicionados pasan por rigurosas pruebas de calidad antes de ser puestos a la venta.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="accordion-item-custom">
+                            <div class="accordion-header-custom collapsed" data-bs-toggle="collapse" data-bs-target="#pregunta2">
+                                ¿Cómo garantizan la calidad y funcionamiento de los componentes?
+                            </div>
+                            <div class="collapse accordion-content-custom" id="pregunta2">
+                                <div class="accordion-body-custom">
+                                    Implementamos un proceso de control de calidad de múltiples etapas que incluye: inspección visual, pruebas funcionales, verificación de rendimiento y certificación final. Cada componente viene con garantía y ha sido probado bajo condiciones reales de uso.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="accordion-item-custom">
+                            <div class="accordion-header-custom collapsed" data-bs-toggle="collapse" data-bs-target="#pregunta3">
+                                ¿De dónde provienen los componentes que vende EcoByte?
+                            </div>
+                            <div class="collapse accordion-content-custom" id="pregunta3">
+                                <div class="accordion-body-custom">
+                                    Nuestros componentes provienen de diversas fuentes: donaciones corporativas, devoluciones de tiendas, equipos de empresas que actualizan su tecnología, y programas de reciclaje electrónico. Todos son verificados y certificados antes de su reventa.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="accordion-item-custom">
+                            <div class="accordion-header-custom collapsed" data-bs-toggle="collapse" data-bs-target="#pregunta4">
+                                ¿Por qué debería comprar un componente reciclado en lugar de uno nuevo?
+                            </div>
+                            <div class="collapse accordion-content-custom" id="pregunta4">
+                                <div class="accordion-body-custom">
+                                    Comprar componentes reciclados reduce el impacto ambiental, ayuda a disminuir la basura electrónica, y ofrece precios más accesibles sin comprometer la calidad. Además, contribuyes a la economía circular y a la conservación de recursos naturales limitados.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator-line"></div>
+
+                <p class="section-subtitle">Compras, Envíos y Sostenibilidad</p>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="accordion-item-custom">
+                            <div class="accordion-header-custom collapsed" data-bs-toggle="collapse" data-bs-target="#pregunta5">
+                                ¿Qué tipo de garantía tienen los productos?
+                            </div>
+                            <div class="collapse accordion-content-custom" id="pregunta5">
+                                <div class="accordion-body-custom">
+                                    Todos nuestros productos reacondicionados cuentan con una garantía de 6 a 12 meses, dependiendo del tipo de componente. Durante este período, cubrimos cualquier defecto de fabricación o mal funcionamiento. Los detalles específicos se encuentran en la descripción de cada producto.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="accordion-item-custom">
+                            <div class="accordion-header-custom collapsed" data-bs-toggle="collapse" data-bs-target="#pregunta6">
+                                Tengo equipos electrónicos viejos, ¿Cómo puedo donarlos a EcoByte?
+                            </div>
+                            <div class="collapse accordion-content-custom" id="pregunta6">
+                                <div class="accordion-body-custom">
+                                    Aceptamos donaciones de equipos electrónicos en buen estado o reparables. Puedes contactarnos a través de nuestro formulario web o visitarnos en nuestras instalaciones. Ofrecemos servicio de recogida para grandes cantidades de equipos. Todos los equipos donados reciben un certificado de reciclaje responsable.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="accordion-item-custom">
+                            <div class="accordion-header-custom collapsed" data-bs-toggle="collapse" data-bs-target="#pregunta7">
+                                ¿Qué métodos de pago aceptan en el sitio web?
+                            </div>
+                            <div class="collapse accordion-content-custom" id="pregunta7">
+                                <div class="accordion-body-custom">
+                                    Aceptamos tarjetas de crédito y débito (Visa, Mastercard, American Express), transferencias bancarias, PayPal, y pagos en efectivo en nuestras instalaciones. También ofrecemos opciones de financiamiento para compras mayores.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="accordion-item-custom">
+                            <div class="accordion-header-custom collapsed" data-bs-toggle="collapse" data-bs-target="#pregunta8">
+                                ¿Ofrecen descuentos para estudiantes o instituciones educativas?
+                            </div>
+                            <div class="collapse accordion-content-custom" id="pregunta8">
+                                <div class="accordion-body-custom">
+                                    Sí. Estudiantes e instituciones educativas tienen un descuento especial. Para validarlo, escríbenos en la página de Contáctanos antes de completar tu pedido.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="accordion-item-custom">
+                            <div class="accordion-header-custom collapsed" data-bs-toggle="collapse" data-bs-target="#pregunta9">
+                                ¿Cómo funciona el proceso de devolución o cambio?
+                            </div>
+                            <div class="collapse accordion-content-custom" id="pregunta9">
+                                <div class="accordion-body-custom">
+                                    Tienes 30 días para solicitar un cambio o devolución si el producto no cumple tus expectativas. El artículo debe estar en su empaque original y en condiciones de reventa. Contacta a nuestro servicio al cliente para iniciar el proceso, y te enviaremos una etiqueta de devolución prepagada.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="accordion-item-custom">
+                            <div class="accordion-header-custom collapsed" data-bs-toggle="collapse" data-bs-target="#pregunta10">
+                                ¿Cuál es el tiempo de entrega de un pedido?
+                            </div>
+                            <div class="collapse accordion-content-custom" id="pregunta10">
+                                <div class="accordion-body-custom">
+                                    El tiempo de entrega varía según tu ubicación: 2-3 días hábiles para entregas locales, 5-7 días para envíos nacionales, y 10-15 días para envíos internacionales. Todos los pedidos incluyen número de seguimiento.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-logo">
+                    <img src="img/LOGO.png" alt="">
+                    EcoByte</div>
+                <p><em>Promovemos la sostenibilidad tecnológica y la economía circular.</em></p>
+                <p><b>Web por:</b></p>
+                <p>Grupo 05</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces útiles</h3>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="Contactanos.html">Contáctanos</a>
+                <a href="InformaciónEducativa.html">Recursos Educativos</a>
+                <a href="Nosotros.html">Sobre Nosotros</a>
+                <a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                <a href="cart.html">Carrito de Compras</a>
+                <a href="Usuario.html">Inicio de Sesión</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fa-regular fa-envelope"></i> info@ecobyte.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Chiclayo - Perú</p>
+                <p><i class="fa-solid fa-globe"></i> www.ecobyte.com</p>
+                <p><i class="fa-solid fa-phone"></i> +51 938 368 675</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 EcoByte — Tecnología con conciencia ecológica - Made with ❤ by Grupo 05</p>
+        </div>
+    </div>
+</footer>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
