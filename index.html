@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoByte | Tecnología con conciencia ecológica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="img/LOGO.png" alt="">
+            EcoByte
+        </a>
+        <div class="spacer"></div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="highlight">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="PreguntasFrecuentes.html">FAQ</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="InformaciónEducativa.html">Info. Educativa</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="Usuario.html" class="btn">Inicia Sesión</a>
+                <a href="cart.html" style="font-size: 1.2rem;"><i class="fa-solid fa-basket-shopping"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
+
+<!-- HERO SECTION -->
+<header class="hero">
+    <div class="hero-content">
+        <h1>Tecnología responsable<br>para un futuro sostenible</h1>
+        <p>Damos nueva vida a los componentes electrónicos, reduciendo el impacto ambiental y fomentando la economía circular.</p>
+        <div class="hero-buttons">
+            <button class="btn" onclick="window.location.href='catalogo.html'">Explorar catálogo</button>
+            <button class="btn" onclick="window.location.href='Contactanos.html'">Contáctanos</button>
+        </div>
+    </div>
+</header>
+
+<!-- QUIÉNES SOMOS -->
+<section class="split-section">
+    <div class="container">
+        <div class="text-block">
+            <h2 class="section-title">¿Quiénes somos?</h2>
+            <p>En <strong>EcoByte</strong> transformamos residuos electrónicos en oportunidades sostenibles. Reacondicionamos y comercializamos componentes tecnológicos reutilizables, promoviendo un consumo más responsable y reduciendo la basura tecnológica.</p>
+        </div>
+        <div class="image-block">
+            <img src="img/inicio-1.jpg" alt="Técnico trabajando">
+        </div>
+    </div>
+</section>
+
+<!-- NUESTRO PROCESO -->
+<section class="split-section reverse">
+    <div class="container">
+        <div class="text-block">
+            <h2 class="section-title">Nuestro proceso</h2>
+            <p>Recolectamos, clasificamos y verificamos dispositivos en desuso, asegurando su funcionalidad y calidad antes de volver al mercado. Cada componente reacondicionado representa un paso hacia un planeta más verde.</p>
+        </div>
+        <div class="image-block">
+            <img src="img/inicio-2.jpg" alt="Componentes electrónicos">
+        </div>
+    </div>
+</section>
+
+<!-- ESTADÍSTICAS -->
+<section class="stats">
+    <div class="container">
+        <div class="stat-item">
+            <div class="stat-icon"><i class="fa-solid fa-recycle"></i></div>
+            <div class="stat-text">+5,000 componentes<br>recuperados</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon"><i class="fa-solid fa-earth-americas"></i></div>
+            <div class="stat-text">12 toneladas de residuos<br>electrónicos evitados</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="stat-text">800 proyectos<br>educativos impulsados</div>
+        </div>
+    </div>
+    <div class="stats-btn-container">
+        <button onclick="window.location.href='Nosotros.html'" class="btn">Ver más información</button>
+    </div>
+</section>
+
+<!-- PRODUCTOS DESTACADOS -->
+<section class="products">
+    <div class="container">
+        <h2 class="section-title">Productos destacados</h2>
+        <div class="products-intro">
+            <p>Explora nuestra selección de componentes reacondicionados, listos para dar nueva vida a tus proyectos tecnológicos.</p>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="img/inicio-pm-1.png" alt="Placa Madre" class="product-image">
+                <h3 class="product-title">Placas madre reacondicionadas</h3>
+                <p class="product-desc">Fiables, verificadas y sostenibles.</p>
+            </div>
+            <div class="product-card">
+                <img src="img/inicio-pm-2.png" alt="Disco Duro" class="product-image">
+                <h3 class="product-title">Discos duros reciclados</h3>
+                <p class="product-desc">Verificados y garantizados para uso seguro.</p>
+            </div>
+            <div class="product-card">
+                <img src="img/inicio-pm-3.png" alt="Memoria RAM" class="product-image">
+                <h3 class="product-title">Módulos de memoria (RAM)</h3>
+                <p class="product-desc">Eficiencia y responsabilidad ecológica en un solo producto.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo footer-logo">
+                    <img src="img/LOGO.png" alt="">
+                    EcoByte</div>
+                <p><em>Promovemos la sostenibilidad tecnológica y la economía circular.</em></p>
+                <p><b>Web por:</b></p>
+                <p>Grupo 05</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces útiles</h3>
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="Contactanos.html">Contáctanos</a>
+                <a href="InformaciónEducativa.html">Recursos Educativos</a>
+                <a href="Nosotros.html">Sobre Nosotros</a>
+                <a href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
+                <a href="cart.html">Carrito de Compras</a>
+                <a href="Usuario.html">Inicio de Sesión</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fa-regular fa-envelope"></i> info@ecobyte.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Chiclayo - Perú</p>
+                <p><i class="fa-solid fa-globe"></i> www.ecobyte.com</p>
+                <p><i class="fa-solid fa-phone"></i> +51 938 368 675</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 EcoByte — Tecnología con conciencia ecológica - Made with ❤ by Grupo 05</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
