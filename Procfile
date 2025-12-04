@@ -1,1 +1,1 @@
-web: npx serve -l $PORT --cleanUrls=false .
+web: npx serve . -l $PORT --no-clean-urls
