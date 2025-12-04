@@ -1,1 +1,1 @@
-web: npm install && npx serve -l $PORT .
+web: npx serve -l $PORT --cleanUrls=false .
